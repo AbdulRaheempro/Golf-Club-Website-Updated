@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#cursor{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(29, 151, 31);
+    border-radius: 50%;
+    left: 30px;
+    position: fixed;
+    z-index: 99;
+    filter: blur(5px);
+}
+
+
+
+
+
+#nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    gap: 45px;
+    position: fixed;
+    align-items: center;
+justify-content: flex-start;
+padding: 0 150px ;
+z-index: 99;
+}
+#nav img{
+    height: 70px; 
+}
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index:-1 ;
+}
+
+#main{
+    position: relative;
+    background-color: rgb(0, 0,0, 0.37);
+
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+#page1 h1{
+    font-size: 90px;
+    font-weight: 800;
+    position: relative;
+}
+
+#page1 h1::before{
+    content: "EAT . DRINK . PLAY .";
+    position: absolute;
+    color: black;
+    top: -6px;
+    left: -6px;
+     -webkit-text-stroke:1px rgb(9, 43, 23) ;
+     
+}
+#page1 h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+#page1 p{
+    font-size: 20px;
+    font-weight: 500;
+    width: 40%;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+#scroller{
+     overflow-x: auto;
+     overflow-y: hidden;
+     white-space: nowrap;
+     position: relative;
+     z-index: 10 ;
+
+    
+    
+    
+    }
+#scroller h4{
+    display: inline-block;
+    font-size: 50px;
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 10px;
+    -webkit-text-stroke: 2px rgb(219, 240, 29);
+    color: transparent;
+    transition: all linear 0.4;
+}
+
+
+#scroller1,#scroller2:hover{
+color: rgb(198, 211, 17);
+
+
+}
+#scroller1{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+     animation-duration: 10s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+}
+#scroller2{
+    display: inline-block;
+    white-space: nowrap;
+     animation-name: scroll;
+     animation-duration: 10s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#about-us{
+    font-size: large;
+    height: 40vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+}
+#about-us img,img{
+    height:100px ;
+    width: 100px;
+    border-radius: 20px;
+    object-fit: cover;
+    display: flex;
+    margin: 0 10px;
+}
+#about{
+    width: 50%;
+    text-align: center;
+}
+#about-us h3{
+
+}
+
+#card-container{
+    height: 60vh;
+    /* background-color: rgb(0, 0, 0); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+
+}
+.card{
+    height: 80%;
+    width: 20%;
+    background-size: cover;
+    background-position: center;
+   overflow: hidden;
+     border-radius: 10px;
+     transition: all ease 0.6s;
+}
+#card1{
+    background-image:url(https://images.unsplash.com/photo-1562204320-31975a5e09ce?q=80&w=847&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) ;
+}
+#card2{
+    background-image: url(https://images.unsplash.com/photo-1597369199842-f08ca157e015?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+#card3{
+    background-image: url(https://images.unsplash.com/photo-1592919505780-303950717480?q=80&w=1254&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.overlay{
+height: 100%;
+width: 100%;
+background-color: rgb(148, 172, 28);
+padding-top: 60px;
+text-align: center;
+opacity: 0;
+transition: all ease 0.6s;
+
+}
+.overlay h4{
+    color: black;
+    font-size: large;
+    text-transform: uppercase;
+}
+.overlay p{
+    color: rgb(3, 4, 5);
+    font size: 18px;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+.green-div{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(148, 172, 28);
+   
+}
+.green-div h4{
+    color: black;
+    width: 50%;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
+#page3{
+    height: 40vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+#page4{
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    
+}
+.elem{
+    height: 75px;
+    width: 26%;
+   border-radius:20px;
+    position: relative;
+    overflow: hidden;
+}
+.elem h2{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(148, 172, 28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: 800;
+    position: absolute;
+    z-index: 10;
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    
+    border-radius:40px ;
+}
+.elem:hover h2{
+    background-color: transparent;
+    
+
+}
+
+#page4 h1{
+    font-size: 70px;
+    position: absolute;
+     top: -8%;
+      font-weight:800 ;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      -webkit-text-stroke: 2px wheat;
+
+}
+/* Footer container */
+#footer {
+    height: 40vh;
+    width: 100%;
+    background-color: rgb(148, 172, 28); /* Background color */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute items evenly */
+    padding: 0 50px; /* Padding around the content */
+    box-sizing: border-box; /* Include padding in width/height calculation */
+}
+
+/* Sections within the footer */
+#f2, #f3, #f4 {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: flex-start; /* Align text to the start */
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+    margin-right: 20px; /* Add space between sections */
+}
+
+/* Headings in #f2 and #f3 */
+#f2 h3, #f3 h3 {
+    font-size: 28px; /* Font size for headings */
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 900;
+    margin: 0 0 8px 0; /* Space below the heading */
+}
+
+/* Slightly less bold headings in #f3 */
+#f3 h3 {
+    font-weight: 800; /* Slightly lighter font weight */
+}
+
+/* Subheading in #f4 */
+#f4 h4 {
+    font-size: 16px; /* Slightly smaller font size for subheadings */
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 600;
+    line-height: 1.25; /* Line height for better readability */
+    margin: 4px 0 8px 0; /* Space above and below the subheading */
+}
+
+
+
+
+
+
+
+
+
